@@ -1,0 +1,24 @@
+# To be tested
+version: "3.7"
+services:
+    restic-rest-server:
+        container_name: resticRestServerProd
+
+        environment:
+        	VIRTUAL_HOST: ${HOST:?Missing environment variable see readme}
+            VIRTUAL_PORT: 8000
+            LETSENCRYPT_HOST: ${HOST:?Missing environment variable see readme}
+
+        networks:
+            - default
+            - nginxproxynet
+
+        ports:
+            - 8000
+
+        volumes:
+            - ./.htpasswd:/data/.htpasswd
+
+networks:
+    nginxproxynet:
+        external: true

@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    restic-rest-server:
+        container_name: resticRestServerDev
+
+        networks:
+            - default
+
+        ports:
+            - ${PORT-8001}:8000
+
+        volumes:
+            - ./.htpasswd.dev:/data/.htpasswd
