@@ -82,7 +82,7 @@ To get a copy up and running follow these simple steps.
 1. Clone the repo
 
 ```sh
-git clone https://github.com/beuluis/restic-rest-server.git --branch master
+git clone https://github.com/beuluis/restic-rest-server.git --branch master --bare
 ```
 
 2. Generate a htpasswd string e.g. on [htpasswd generator](http://aspirine.org/htpasswd_en.html). Use SHA-1 as algorithm
