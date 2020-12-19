@@ -21,4 +21,5 @@ services:
 
 networks:
     nginxproxynet:
+        name: ${PROXY_NETWORK_NAME-nginxproxynet}
         external: true

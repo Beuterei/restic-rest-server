@@ -15,4 +15,5 @@ services:
             - resticRestServerData:/data
 
 volumes:
-    resticRestServerData: {}
+    resticRestServerData:
+        driver: local
