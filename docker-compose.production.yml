@@ -5,7 +5,7 @@ services:
         container_name: resticRestServerProd
 
         environment:
-        	VIRTUAL_HOST: ${HOST:?Missing environment variable see readme}
+            VIRTUAL_HOST: ${HOST:?Missing environment variable see readme}
             VIRTUAL_PORT: 8000
             LETSENCRYPT_HOST: ${HOST:?Missing environment variable see readme}
 
