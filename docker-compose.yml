@@ -1,15 +1,12 @@
 version: "3.7"
 services:
     restic-rest-server:
-        image: restic/rest-server:0.9.7
+        image: restic/rest-server:0.10.0
 
         networks:
             - default
 
         restart: always
-
-        environment:
-            OPTIONS: ${RESTIC_REST_SERVER_FLAGS---private-repos}
 
         volumes:
             - resticRestServerData:/data
